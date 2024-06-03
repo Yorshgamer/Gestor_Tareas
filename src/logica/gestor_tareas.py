@@ -15,3 +15,9 @@ class GestorTareas:
 
     def obtener_tareas(self):
         return self.tareas
+
+    def eliminar_tarea(self, indice):
+        if 0 <= indice < len(self.tareas):
+            del self.tareas[indice]
+        else:
+            raise IndexError("Índice fuera de rango")
